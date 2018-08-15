@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id ="add" class="in.co.capgemini.Address"
+		p:line1="M6, Knowledge Park"
+		p:line2="Capgemini, Airoli"
+		p:city="Mumbai"
+		p:state="Maharashtra"
+		p:pincode="400103"
+		p:country="India">
+	</bean>
+	
+	
+	<bean id ="org" class ="in.co.capgemini.Organization"
+		p:name="Capgemini"
+		p:address-ref="add"
+		p:marketvalue="4444646.0"
+		p:establishedDate="15/07/1967"
+		p:employeeCount="200000">
+			
+		<property name ="globalPresence">
+			<set>
+				<value>India</value>
+				<value>Europe</value>
+				<value>North America</value>
+				<value>Canada</value>
+			</set>
+		</property>
+		
+		<property name ="boardMembers">
+			<set>
+				<value>M10</value>
+				<value>M20</value>
+				<value>M30</value>
+				<value>M40</value>
+			</set>
+		</property>
+		
+	
+		<property name ="projectManager">
+			<map>
+				<entry key="key 1" value="Sample1"/>
+				<entry key="key 2" value="Sample1"/>
+				<entry key="key 3" value="Sample1"/>
+				<entry key="key 4" value="Sample1"/>
+			</map>
+		</property>
+		
+		<property name="proxyServerList">
+			<map>
+				<entry key="key 1" value="192.168.0.1"/>
+				<entry key="key 2" value="192.168.0.2"/>
+				<entry key="key 3" value="192.168.0.3"/>
+				<entry key="key 4" value="192.168.0.4"/>
+			</map>
+		</property>
+		
+	</bean>
+</beans>
